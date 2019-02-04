@@ -1,0 +1,8 @@
+# I can't stand anything without dark mode.
+
+FROM jupyter/minimal-notebook
+
+USER root
+
+RUN pip install jupyterthemes
+RUN jt -t gruvboxd
