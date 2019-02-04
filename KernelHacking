@@ -1,0 +1,7 @@
+# For messing with the linux kernel.
+FROM ubuntu
+RUN apt-get update
+RUN apt-get install -y vim libncurses5-dev gcc make git exuberant-ctags libssl-dev bison flex libelf-dev bc
+RUN mkdir -p git/kernels; cd git/kernels
+RUN git clone -b staging-testing git://git.kernel.org/pub/scm/linux/kernel/git/gregkh/staging.git
+RUN cd staging
